@@ -3,7 +3,7 @@ import Portfolio from "@/components/Portfolio";
 
 export default function Home() {
   return (
-    <main>
+    <main className="main">
       <Header />
       <Portfolio />
     </main>
