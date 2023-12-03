@@ -1,10 +1,36 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 
 export default function Header() {
+  const [showDropdown, setShowDropdown] = useState(false);
+  const handleDropdownToggle = () => {
+    setShowDropdown(!showDropdown);
+  };
+  const handleOptionClick = (option: any) => {
+    setShowDropdown(false);
+  };
+
   return (
     <>
       <div className="main-border-top"></div>
+      <div className="dropdown">
+        <button onClick={handleDropdownToggle}>Language</button>
+        {showDropdown && (
+          <ul className="dropdown-content">
+            <li>
+              <button onClick={() => handleOptionClick("Option 1")}>
+                Option 1
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleOptionClick("Option 2")}>
+                Option 2
+              </button>
+            </li>
+          </ul>
+        )}
+      </div>
       <header className="header">
         <nav>
           <ul>
