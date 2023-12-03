@@ -1,4 +1,4 @@
-export interface About {
+export interface Project {
   _id: string;
   _createdAt: string;
   _updatedAt: string;
@@ -15,4 +15,17 @@ export interface About {
   };
   second_description: any;
   image_list: any;
+}
+
+export interface About {
+  _id: string;
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  _type: string;
+  lenguage: any;
+  description: any;
+  skills: any;
+  education: any;
+  resume: any;
 }
