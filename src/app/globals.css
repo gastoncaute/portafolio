@@ -34,7 +34,9 @@ main {
   width: 50%;
   height: 215px;
   border-width: 0.5rem 0 0 0.5rem;
-  border-color: #ba4c0b;
+  border-style: solid;
+  border-image: linear-gradient(to bottom right, #ba4c0b, #4b4b4b);
+  border-image-slice: 1;
   border-radius: 25px 0 0 0;
   z-index: -1;
 }
@@ -46,10 +48,14 @@ main {
   width: 50%;
   height: 215px;
   border-width: 0 0.5rem 0.5rem 0;
-  border-color: #ba4c0b;
+  border-style: solid;
+  border-image: linear-gradient(to top left, #ba4c0b, #4b4b4b);
+  border-image-slice: 1;
   border-radius: 0 0 25px 0;
   z-index: -1;
 }
+
+/* -------------------------------------------------------------------------------------------------HEADER--------------------------------------------------------------------------------------- */
 
 header {
   margin-top: 1rem;
@@ -118,3 +124,5 @@ header nav ul li {
   background-color: #ba4c0b;
   color: #fff;
 }
+
+/* --------------------------------------------------------------------------------------------------TABS---------------------------------------------------------------------------------------- */
