@@ -133,8 +133,8 @@ header nav ul li {
   border-width: 0 0 0.2rem 0.2rem;
   border-radius: 0 0 0 15px;
   padding-top: 0.6rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .tab-nav ul li button {
