@@ -5,7 +5,7 @@ import AboutSection from "./AboutSection";
 import ProjectSection from "./ProjectSection";
 import ContactSecion from "./ContactSecion";
 
-export default function Tabs() {
+export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
   const [visibleComponent, setVisibleComponent] = useState("resume");
   return (
     <nav className="tab-nav">
@@ -27,6 +27,7 @@ export default function Tabs() {
           </button>
         </li>
       </ul>
+      <h1>{selectedLanguage}</h1>
       {visibleComponent === "resume" && <ResumeSection />}
       {visibleComponent === "about" && <AboutSection />}
       {visibleComponent === "projects" && <ProjectSection />}

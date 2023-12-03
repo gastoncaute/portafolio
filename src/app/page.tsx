@@ -5,11 +5,14 @@ import { useState } from "react";
 
 export default function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("spanish");
+
   const handleDropdownToggle = () => {
     setShowDropdown(!showDropdown);
   };
   const handleOptionClick = (option: any) => {
     setShowDropdown(false);
+    setSelectedLanguage(option);
   };
 
   return (
@@ -33,7 +36,7 @@ export default function Home() {
         )}
       </div>
       <Header />
-      <Tabs />
+      <Tabs selectedLanguage={selectedLanguage} />
       <div className="main-border-bottom"></div>
     </main>
   );
