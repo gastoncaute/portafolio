@@ -33,7 +33,7 @@ main {
   top: 0.5rem;
   width: 50%;
   height: 215px;
-  border-width: 1rem 0 0 1rem;
+  border-width: 0.5rem 0 0 0.5rem;
   border-color: #ba4c0b;
   border-radius: 25px 0 0 0;
 }
@@ -44,7 +44,7 @@ main {
   bottom: 0.5rem;
   width: 50%;
   height: 215px;
-  border-width: 0 1rem 1rem 0;
+  border-width: 0 0.5rem 0.5rem 0;
   border-color: #ba4c0b;
   border-radius: 0 0 25px 0;
 }
