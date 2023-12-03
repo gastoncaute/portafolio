@@ -9,10 +9,11 @@ export default function Header() {
           <li className="home-li">
             <Link href={"/"}>
               <svg
+                className="header-svg"
                 width="44"
                 height="44"
                 viewBox="0 0 24 24"
-                stroke-width="1"
+                stroke-width="1.5"
                 stroke="#ffffff"
                 fill="none"
                 stroke-linecap="round"
@@ -31,10 +32,11 @@ export default function Header() {
               target="#"
             >
               <svg
+                className="header-svg"
                 width="44"
                 height="44"
                 viewBox="0 0 24 24"
-                stroke-width="0.8"
+                stroke-width="1.5"
                 stroke="#ffffff"
                 fill="none"
                 stroke-linecap="round"
@@ -52,10 +54,11 @@ export default function Header() {
           <li>
             <Link href={"https://github.com/gastoncaute"} target="#">
               <svg
+                className="header-svg"
                 width="44"
                 height="44"
                 viewBox="0 0 24 24"
-                stroke-width="0.8"
+                stroke-width="1.5"
                 stroke="#ffffff"
                 fill="none"
                 stroke-linecap="round"
@@ -69,10 +72,11 @@ export default function Header() {
           <li>
             <Link href={"mailto:gastoncaute@gmail.com"} target="#">
               <svg
+                className="header-svg"
                 width="44"
                 height="44"
                 viewBox="0 0 24 24"
-                stroke-width="0.8"
+                stroke-width="1.5"
                 stroke="#ffffff"
                 fill="none"
                 stroke-linecap="round"
