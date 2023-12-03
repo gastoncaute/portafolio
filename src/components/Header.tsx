@@ -19,13 +19,13 @@ export default function Header() {
         {showDropdown && (
           <ul className="dropdown-content">
             <li>
-              <button onClick={() => handleOptionClick("Option 1")}>
-                Option 1
+              <button onClick={() => handleOptionClick("spanish")}>
+                Spanish
               </button>
             </li>
             <li>
-              <button onClick={() => handleOptionClick("Option 2")}>
-                Option 2
+              <button onClick={() => handleOptionClick("english")}>
+                English
               </button>
             </li>
           </ul>
