@@ -27,6 +27,28 @@ main {
   padding: 2rem;
 }
 
+.main-border-top {
+  position: fixed;
+  left: 0.5rem;
+  top: 0.5rem;
+  width: 50%;
+  height: 215px;
+  border-width: 1rem 0 0 1rem;
+  border-color: #ba4c0b;
+  border-radius: 25px 0 0 0;
+}
+
+.main-border-bottom {
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  width: 50%;
+  height: 215px;
+  border-width: 0 1rem 1rem 0;
+  border-color: #ba4c0b;
+  border-radius: 0 0 25px 0;
+}
+
 header {
   background: black;
   width: 100%;
