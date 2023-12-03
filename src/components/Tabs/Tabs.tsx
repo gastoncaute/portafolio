@@ -7,23 +7,41 @@ import ContactSecion from "./ContactSecion";
 
 export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
   const [visibleComponent, setVisibleComponent] = useState("resume");
+  const getButtonText = (component: string) => {
+    switch (component) {
+      case "resume":
+        return selectedLanguage === "spanish" ? "Currículum" : "Resume";
+      case "about":
+        return selectedLanguage === "spanish" ? "Sobre mí" : "About";
+      case "projects":
+        return selectedLanguage === "spanish" ? "Proyectos" : "Projects";
+      case "contact":
+        return selectedLanguage === "spanish" ? "Contacto" : "Contact";
+      default:
+        return "";
+    }
+  };
   return (
     <nav className="tab-nav">
       <ul>
         <li>
-          <button onClick={() => setVisibleComponent("resume")}>Resume</button>
+          <button onClick={() => setVisibleComponent("resume")}>
+            {getButtonText("resume")}
+          </button>
         </li>
         <li>
-          <button onClick={() => setVisibleComponent("about")}>About</button>
+          <button onClick={() => setVisibleComponent("about")}>
+            {getButtonText("about")}
+          </button>
         </li>
         <li>
           <button onClick={() => setVisibleComponent("projects")}>
-            Projects
+            {getButtonText("projects")}
           </button>
         </li>
         <li>
           <button onClick={() => setVisibleComponent("contact")}>
-            Contact
+            {getButtonText("contact")}
           </button>
         </li>
       </ul>
