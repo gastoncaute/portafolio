@@ -10,7 +10,7 @@ export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
   const getButtonText = (component: string) => {
     switch (component) {
       case "resume":
-        return selectedLanguage === "spanish" ? "Currículum" : "Resume";
+        return selectedLanguage === "spanish" ? "Resumen" : "Resume";
       case "about":
         return selectedLanguage === "spanish" ? "Sobre mí" : "About";
       case "projects":
@@ -45,11 +45,18 @@ export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
           </button>
         </li>
       </ul>
-      <h1>{selectedLanguage}</h1>
-      {visibleComponent === "resume" && <ResumeSection />}
-      {visibleComponent === "about" && <AboutSection />}
-      {visibleComponent === "projects" && <ProjectSection />}
-      {visibleComponent === "contact" && <ContactSecion />}
+      {visibleComponent === "resume" && (
+        <ResumeSection selectedLanguage={selectedLanguage} />
+      )}
+      {visibleComponent === "about" && (
+        <AboutSection selectedLanguage={selectedLanguage} />
+      )}
+      {visibleComponent === "projects" && (
+        <ProjectSection selectedLanguage={selectedLanguage} />
+      )}
+      {visibleComponent === "contact" && (
+        <ContactSecion selectedLanguage={selectedLanguage} />
+      )}
     </nav>
   );
 }

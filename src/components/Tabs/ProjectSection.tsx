@@ -1,7 +1,16 @@
 import React from "react";
 
-export default function ProjectSection() {
-  return <div>ProjectSection</div>;
+export default function ProjectSection({
+  selectedLanguage,
+}: {
+  selectedLanguage: any;
+}) {
+  return (
+    <section>
+      <h1>Projects Section</h1>
+      <h2>{selectedLanguage}</h2>
+    </section>
+  );
 }
 
 // import { Portfolio } from "@/types/components.types";
