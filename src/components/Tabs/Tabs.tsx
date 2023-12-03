@@ -7,6 +7,9 @@ import ContactSecion from "./ContactSecion";
 
 export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
   const [visibleComponent, setVisibleComponent] = useState("resume");
+  const setActiveSection = (section: string) => {
+    setVisibleComponent(section);
+  };
   const getButtonText = (component: string) => {
     switch (component) {
       case "resume":
@@ -25,22 +28,34 @@ export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
     <nav className="tab-nav">
       <ul>
         <li>
-          <button onClick={() => setVisibleComponent("resume")}>
+          <button
+            className={visibleComponent === "resume" ? "active" : ""}
+            onClick={() => setActiveSection("resume")}
+          >
             {getButtonText("resume")}
           </button>
         </li>
         <li>
-          <button onClick={() => setVisibleComponent("about")}>
+          <button
+            className={visibleComponent === "about" ? "active" : ""}
+            onClick={() => setActiveSection("about")}
+          >
             {getButtonText("about")}
           </button>
         </li>
         <li>
-          <button onClick={() => setVisibleComponent("projects")}>
+          <button
+            className={visibleComponent === "projects" ? "active" : ""}
+            onClick={() => setActiveSection("projects")}
+          >
             {getButtonText("projects")}
           </button>
         </li>
         <li>
-          <button onClick={() => setVisibleComponent("contact")}>
+          <button
+            className={visibleComponent === "contact" ? "active" : ""}
+            onClick={() => setActiveSection("contact")}
+          >
             {getButtonText("contact")}
           </button>
         </li>

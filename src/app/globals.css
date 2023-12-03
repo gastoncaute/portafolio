@@ -147,7 +147,7 @@ header nav ul li {
   color: #6b7280;
 }
 
-.tab-nav ul li button:hover {
+.tab-nav ul li button.active {
   background-color: #ba4c0b;
   color: #fff;
 }
