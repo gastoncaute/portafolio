@@ -6,7 +6,7 @@ import ProjectSection from "./ProjectSection";
 import ContactSecion from "./ContactSecion";
 
 export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
-  const [visibleComponent, setVisibleComponent] = useState("resume");
+  const [visibleComponent, setVisibleComponent] = useState("about");
   const setActiveSection = (section: string) => {
     setVisibleComponent(section);
   };
