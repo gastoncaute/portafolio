@@ -1,4 +1,4 @@
-export interface Portfolio {
+export interface About {
   _id: string;
   _createdAt: string;
   _updatedAt: string;
