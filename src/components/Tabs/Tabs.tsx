@@ -29,14 +29,6 @@ export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
       <ul>
         <li>
           <button
-            className={visibleComponent === "resume" ? "active" : ""}
-            onClick={() => setActiveSection("resume")}
-          >
-            {getButtonText("resume")}
-          </button>
-        </li>
-        <li>
-          <button
             className={visibleComponent === "about" ? "active" : ""}
             onClick={() => setActiveSection("about")}
           >
@@ -49,6 +41,14 @@ export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
             onClick={() => setActiveSection("projects")}
           >
             {getButtonText("projects")}
+          </button>
+        </li>
+        <li>
+          <button
+            className={visibleComponent === "resume" ? "active" : ""}
+            onClick={() => setActiveSection("resume")}
+          >
+            {getButtonText("resume")}
           </button>
         </li>
         <li>
