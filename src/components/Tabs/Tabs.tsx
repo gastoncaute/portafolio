@@ -8,7 +8,7 @@ import ContactSecion from "./ContactSecion";
 export default function Tabs() {
   const [visibleComponent, setVisibleComponent] = useState("resume");
   return (
-    <nav>
+    <nav className="tab-nav">
       <ul>
         <li>
           <button onClick={() => setVisibleComponent("resume")}>Resume</button>

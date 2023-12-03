@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Portfolio from "@/components/Portfolio";
 import Tabs from "@/components/Tabs/Tabs";
 
 export default function Home() {
@@ -7,7 +6,6 @@ export default function Home() {
     <main className="main">
       <Header />
       <Tabs />
-      <Portfolio />
     </main>
   );
 }
