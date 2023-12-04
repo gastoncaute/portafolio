@@ -22,7 +22,7 @@ export default function AboutSection({
         }
 
         const data = await response.json();
-        setAboutData(data.result); // Assuming there is only one result
+        setAboutData(data.result);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -31,15 +31,19 @@ export default function AboutSection({
     fetchData();
   }, []);
 
+  const filteredAboutData = aboutData?.filter(
+    (item: About) => item.language === selectedLanguage
+  );
+
   return (
     <section>
       <h1>About Section</h1>
       {aboutData && (
         <>
-          <h2>{selectedLanguage}</h2>
-          {aboutData.map((item: About) => (
+          {filteredAboutData.map((item: About) => (
             <section key={item._id}>
-              <h1>{item.lenguage}</h1>
+              <h2>Lenuguaje seleccionado: {selectedLanguage}</h2>
+              <h1>Lenuguaje: {item.language}</h1>
               <h1>
                 <PortableText value={item.description} />
               </h1>

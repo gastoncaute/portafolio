@@ -23,7 +23,7 @@ export interface About {
   _updatedAt: string;
   _rev: string;
   _type: string;
-  lenguage: any;
+  language: any;
   description: any;
   skills: any;
   education: any;
