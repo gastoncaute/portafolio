@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("spanish");
+  const [selectedLanguage, setSelectedLanguage] = useState("Spanish");
 
   const handleDropdownToggle = () => {
     setShowDropdown(!showDropdown);
@@ -23,12 +23,12 @@ export default function Home() {
         {showDropdown && (
           <ul className="dropdown-content">
             <li>
-              <button onClick={() => handleOptionClick("spanish")}>
+              <button onClick={() => handleOptionClick("Spanish")}>
                 Spanish
               </button>
             </li>
             <li>
-              <button onClick={() => handleOptionClick("english")}>
+              <button onClick={() => handleOptionClick("English")}>
                 English
               </button>
             </li>

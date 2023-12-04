@@ -13,13 +13,13 @@ export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
   const getButtonText = (component: string) => {
     switch (component) {
       case "about":
-        return selectedLanguage === "spanish" ? "Sobre mí" : "About";
+        return selectedLanguage === "Spanish" ? "Sobre mí" : "About";
       case "projects":
-        return selectedLanguage === "spanish" ? "Proyectos" : "Projects";
+        return selectedLanguage === "Spanish" ? "Proyectos" : "Projects";
       case "contact":
-        return selectedLanguage === "spanish" ? "Contacto" : "Contact";
+        return selectedLanguage === "Spanish" ? "Contacto" : "Contact";
       case "resume":
-        return selectedLanguage === "spanish" ? "Currículum" : "Resume";
+        return selectedLanguage === "Spanish" ? "Currículum" : "Resume";
       default:
         return "";
     }
