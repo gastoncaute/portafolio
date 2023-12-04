@@ -37,7 +37,7 @@ export default function AboutSection({
       {aboutData && (
         <section className="tabs-sections">
           {filteredAboutData.map((item: About) => (
-            <article key={item._id}>
+            <article key={item._id} className="resume-article">
               <Link href={item.resume.resume_link} target="#">
                 <Image
                   src={modifyImageUrl(item.resume.resume_image.asset._ref)}
