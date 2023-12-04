@@ -5,6 +5,7 @@ export interface Project {
   _rev: string;
   _type: string;
   title: any;
+  language: any;
   description: any;
   main_image: {
     image: {
@@ -13,6 +14,7 @@ export interface Project {
     };
     epigraph: any;
   };
+  page_link: any;
   second_description: any;
   image_list: any;
 }

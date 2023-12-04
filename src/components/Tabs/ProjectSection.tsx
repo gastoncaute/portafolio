@@ -1,34 +1,60 @@
-import React from "react";
+"use client";
+import { Project } from "@/types/components.types";
+import { PortableText } from "@portabletext/react";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { modifyImageUrl } from "@/utils/modifyImageUrl";
 
-export default function ProjectSection({
+export default function AboutSection({
   selectedLanguage,
 }: {
   selectedLanguage: any;
 }) {
+  const [projectData, setProjectData] = useState<any>(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://ouy7dg4a.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%27projects%27%5D"
+        );
+        if (!response.ok) {
+          throw new Error("Error fetching data");
+        }
+        const data = await response.json();
+        setProjectData(data.result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+  const filteredProjectData = projectData?.filter(
+    (item: Project) => item.language === selectedLanguage
+  );
+
   return (
     <section>
       <h1>Projects Section</h1>
-      <h2>{selectedLanguage}</h2>
+      {projectData && (
+        <>
+          {filteredProjectData.map((item: Project) => (
+            <section key={item._id}>
+              <h2>Lenuguaje seleccionado: {selectedLanguage}</h2>
+              <h1>Lenuguaje: {item.language}</h1>
+              <h2>
+                <PortableText value={item.title} />
+                <PortableText value={item.description} />
+                <Image
+                  src={modifyImageUrl(item.main_image.image.asset._ref)}
+                  alt={item.main_image.epigraph}
+                  height={1000}
+                  width={500}
+                />
+              </h2>
+            </section>
+          ))}
+        </>
+      )}
     </section>
   );
 }
-
-// import { Portfolio } from "@/types/components.types";
-// import { getPortfolio } from "@/utils/getPortfolio";
-// import { PortableText } from "@portabletext/react";
-// import React from "react";
-
-// export default async function Portfolio() {
-//   const portfolio = await getPortfolio();
-//   return (
-//     <>
-//       {portfolio.map((item: Portfolio, index: number) => (
-//         <section key={index} className="text-white">
-//           <h1>
-//             <PortableText value={item.title} />
-//           </h1>
-//         </section>
-//       ))}
-//     </>
-//   );
-// }
