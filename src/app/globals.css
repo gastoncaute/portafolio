@@ -185,7 +185,8 @@ header nav ul li {
   font: bold;
 }
 
-.about-article h2 {
+.about-article h2,
+h3 {
   font-size: 28px;
   font: bold;
   margin-top: 1rem;
@@ -207,12 +208,6 @@ header nav ul li {
 
 .about-article h2 .about-article-p p {
   margin-left: 0.5rem;
-}
-
-.about-article h3 {
-  font-size: 28px;
-  font: bold;
-  margin-top: 1rem;
 }
 
 .about-article-p {
