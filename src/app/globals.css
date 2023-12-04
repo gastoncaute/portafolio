@@ -37,7 +37,6 @@ main {
   border-style: solid;
   border-image: linear-gradient(to bottom right, #ba4c0b, #4b4b4b);
   border-image-slice: 1;
-  border-radius: 25px 0 0 0;
   z-index: -1;
 }
 
@@ -51,7 +50,6 @@ main {
   border-style: solid;
   border-image: linear-gradient(to top left, #ba4c0b, #4b4b4b);
   border-image-slice: 1;
-  border-radius: 0 0 25px 0;
   z-index: -1;
 }
 
@@ -142,7 +140,6 @@ header nav ul li {
   border-image: linear-gradient(to top right, #ba4c0b, #4b4b4b);
   border-image-slice: 1;
   border-width: 0 0 0.2rem 0.2rem;
-  border-radius: 0 0 0 15px;
   padding-top: 0.6rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -210,6 +207,16 @@ header nav ul li {
 }
 
 /* ---------------------------------------------------------------------------------------------TABS ABOUT---------------------------------------------------------------------------------------- */
+
+.resume-article {
+  border-style: solid;
+  border-image: linear-gradient(to top right, #ba4c0b, #4b4b4b);
+  border-image-slice: 1;
+  border-width: 0 0 0.2rem 0.2rem;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 /* ---------------------------------------------------------------------------------------------TABS CONTACT---------------------------------------------------------------------------------------- */
 
 .contact-section {
