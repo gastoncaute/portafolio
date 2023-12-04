@@ -34,20 +34,17 @@ export default function AboutSection({
   return (
     <>
       {contactData && (
-        <section className="tabs-sections">
+        <section className="contact-section">
           {filteredContactData.map((item: Contact) => (
-            <section key={item._id}>
-              <h2>
-                {item.social_network}
-                {item.social_link}
-                <Image
-                  src={modifyImageUrl(item.social_image.asset._ref)}
-                  alt={item.social_network}
-                  height={1000}
-                  width={500}
-                />
-              </h2>
-            </section>
+            <article key={item._id} className="contact-article">
+              <h2>{item.social_network}</h2>
+              <Image
+                src={modifyImageUrl(item.social_image.asset._ref)}
+                alt={item.social_network}
+                height={1000}
+                width={350}
+              />{" "}
+            </article>
           ))}
         </section>
       )}
