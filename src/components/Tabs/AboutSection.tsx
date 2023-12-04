@@ -35,17 +35,26 @@ export default function AboutSection({
       {aboutData && (
         <section className="tabs-sections">
           {filteredAboutData.map((item: About) => (
-            <section key={item._id}>
+            <article key={item._id} className="about-article">
               <h1>
-                <PortableText value={item.description} />
+                Bienvenido a Mi Portafolio
+                <p className="about-article-p">
+                  <PortableText value={item.description} />
+                </p>
               </h1>
-              <h2>
-                <PortableText value={item.skills} />
-              </h2>
-              <h3>
-                <PortableText value={item.education} />
-              </h3>
-            </section>
+              <h1>
+                Educación
+                <p className="about-article-p">
+                  <PortableText value={item.education} />
+                </p>
+              </h1>
+              <h1>
+                Habilidades
+                <p className="about-article-p">
+                  <PortableText value={item.skills} />
+                </p>
+              </h1>
+            </article>
           ))}
         </section>
       )}
