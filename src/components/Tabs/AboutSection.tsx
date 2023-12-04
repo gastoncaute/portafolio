@@ -29,6 +29,10 @@ export default function AboutSection({
   const filteredAboutData = aboutData?.filter(
     (item: About) => item.language === selectedLanguage
   );
+  const getTitlesText =
+    selectedLanguage === "Spanish"
+      ? ["Bienvenido a Mi Portafolio", "Educación"]
+      : ["Welcome", "Education"];
 
   return (
     <>
@@ -37,13 +41,13 @@ export default function AboutSection({
           {filteredAboutData.map((item: About) => (
             <article key={item._id} className="about-article">
               <h1>
-                Bienvenido a Mi Portafolio
+                {getTitlesText[0]}
                 <p className="about-article-p">
                   <PortableText value={item.description} />
                 </p>
               </h1>
               <h2>
-                Educación
+                {getTitlesText[1]}
                 <p className="about-article-p">
                   <PortableText value={item.education} />
                 </p>
