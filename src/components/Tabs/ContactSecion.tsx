@@ -34,7 +34,7 @@ export default function AboutSection({
   return (
     <>
       {contactData && (
-        <section className="contact-section">
+        <section className="tabs-sections">
           {filteredContactData.map((item: Contact) => (
             <article key={item._id} className="contact-article">
               <h2>{item.social_network}</h2>
