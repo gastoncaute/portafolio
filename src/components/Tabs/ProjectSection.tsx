@@ -33,14 +33,11 @@ export default function AboutSection({
   );
 
   return (
-    <section>
-      <h1>Projects Section</h1>
+    <>
       {projectData && (
-        <>
+        <section className="tabs-sections">
           {filteredProjectData.map((item: Project) => (
             <section key={item._id}>
-              <h2>Lenuguaje seleccionado: {selectedLanguage}</h2>
-              <h1>Lenuguaje: {item.language}</h1>
               <h2>
                 <PortableText value={item.title} />
                 <PortableText value={item.description} />
@@ -53,8 +50,8 @@ export default function AboutSection({
               </h2>
             </section>
           ))}
-        </>
+        </section>
       )}
-    </section>
+    </>
   );
 }

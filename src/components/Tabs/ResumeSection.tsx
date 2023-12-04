@@ -1,6 +1,6 @@
 "use client";
 import { About } from "@/types/components.types";
-import { PortableText } from "@portabletext/react";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { modifyImageUrl } from "@/utils/modifyImageUrl";
@@ -33,27 +33,23 @@ export default function AboutSection({
   );
 
   return (
-    <section>
-      <h1>Resume Section</h1>
+    <>
       {aboutData && (
-        <>
+        <section className="tabs-sections">
           {filteredAboutData.map((item: About) => (
-            <section key={item._id}>
-              <h2>Lenuguaje seleccionado: {selectedLanguage}</h2>
-              <h1>Lenuguaje: {item.language}</h1>
-              <h2>
-                <PortableText value={item.resume.resume_link} />
+            <article key={item._id}>
+              <Link href={item.resume.resume_link} target="#">
                 <Image
                   src={modifyImageUrl(item.resume.resume_image.asset._ref)}
                   alt="Resume"
                   height={1000}
-                  width={500}
+                  width={350}
                 />
-              </h2>
-            </section>
+              </Link>
+            </article>
           ))}
-        </>
+        </section>
       )}
-    </section>
+    </>
   );
 }

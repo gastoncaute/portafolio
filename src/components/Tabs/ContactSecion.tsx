@@ -32,14 +32,11 @@ export default function AboutSection({
   );
 
   return (
-    <section>
-      <h1>Contact Section</h1>
+    <>
       {contactData && (
-        <>
+        <section className="tabs-sections">
           {filteredContactData.map((item: Contact) => (
             <section key={item._id}>
-              <h2>Lenuguaje seleccionado: {selectedLanguage}</h2>
-              <h1>Lenuguaje: {item.language}</h1>
               <h2>
                 {item.social_network}
                 {item.social_link}
@@ -52,8 +49,8 @@ export default function AboutSection({
               </h2>
             </section>
           ))}
-        </>
+        </section>
       )}
-    </section>
+    </>
   );
 }
