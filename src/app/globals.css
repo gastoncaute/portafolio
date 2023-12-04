@@ -156,7 +156,7 @@ header nav ul li {
 }
 
 .tab-nav ul li button.active {
-  background-color: #ba4c0b;
+  background: linear-gradient(to bottom, #ba4c0b, #9e5429);
   color: #fff;
 }
 
@@ -189,6 +189,24 @@ header nav ul li {
   font-size: 28px;
   font: bold;
   margin-top: 1rem;
+}
+
+.about-article h2 .about-article-p ul {
+  width: min-content;
+  background: linear-gradient(to bottom, #ba4c0b, #9e5429);
+  padding: 0.1rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  border-radius: 10px;
+}
+
+.about-article h2 .about-article-p ul li {
+  width: max-content;
+  margin: auto;
+}
+
+.about-article h2 .about-article-p p {
+  margin-left: 0.5rem;
 }
 
 .about-article h3 {
