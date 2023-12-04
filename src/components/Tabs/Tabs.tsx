@@ -25,41 +25,43 @@ export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
     }
   };
   return (
-    <nav className="tab-nav">
-      <ul>
-        <li>
-          <button
-            className={visibleComponent === "about" ? "active" : ""}
-            onClick={() => setActiveSection("about")}
-          >
-            {getButtonText("about")}
-          </button>
-        </li>
-        <li>
-          <button
-            className={visibleComponent === "projects" ? "active" : ""}
-            onClick={() => setActiveSection("projects")}
-          >
-            {getButtonText("projects")}
-          </button>
-        </li>
-        <li>
-          <button
-            className={visibleComponent === "resume" ? "active" : ""}
-            onClick={() => setActiveSection("resume")}
-          >
-            {getButtonText("resume")}
-          </button>
-        </li>
-        <li>
-          <button
-            className={visibleComponent === "contact" ? "active" : ""}
-            onClick={() => setActiveSection("contact")}
-          >
-            {getButtonText("contact")}
-          </button>
-        </li>
-      </ul>
+    <>
+      <nav className="tab-nav">
+        <ul>
+          <li>
+            <button
+              className={visibleComponent === "about" ? "active" : ""}
+              onClick={() => setActiveSection("about")}
+            >
+              {getButtonText("about")}
+            </button>
+          </li>
+          <li>
+            <button
+              className={visibleComponent === "projects" ? "active" : ""}
+              onClick={() => setActiveSection("projects")}
+            >
+              {getButtonText("projects")}
+            </button>
+          </li>
+          <li>
+            <button
+              className={visibleComponent === "resume" ? "active" : ""}
+              onClick={() => setActiveSection("resume")}
+            >
+              {getButtonText("resume")}
+            </button>
+          </li>
+          <li>
+            <button
+              className={visibleComponent === "contact" ? "active" : ""}
+              onClick={() => setActiveSection("contact")}
+            >
+              {getButtonText("contact")}
+            </button>
+          </li>
+        </ul>
+      </nav>
       {visibleComponent === "resume" && (
         <ResumeSection selectedLanguage={selectedLanguage} />
       )}
@@ -72,6 +74,6 @@ export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
       {visibleComponent === "contact" && (
         <ContactSecion selectedLanguage={selectedLanguage} />
       )}
-    </nav>
+    </>
   );
 }
