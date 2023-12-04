@@ -137,7 +137,7 @@ header nav ul li {
   display: flex;
   justify-content: space-around;
   border-style: solid;
-  border-image: linear-gradient(to top right, #ba4c0b, #4b4b4b);
+  border-image: linear-gradient(to bottom, #ba4c0b, #9e5429);
   border-image-slice: 1;
   border-width: 0 0 0.2rem 0.2rem;
   padding-top: 0.6rem;
