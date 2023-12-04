@@ -3,7 +3,7 @@ import { About } from "@/types/components.types";
 import { PortableText } from "@portabletext/react";
 import React, { useState, useEffect } from "react";
 
-export default function AboutSection({
+export default function SkillsSection({
   selectedLanguage,
 }: {
   selectedLanguage: any;
@@ -37,17 +37,11 @@ export default function AboutSection({
           {filteredAboutData.map((item: About) => (
             <article key={item._id} className="about-article">
               <h1>
-                Bienvenido a Mi Portafolio
+                Habilidades
                 <p className="about-article-p">
-                  <PortableText value={item.description} />
+                  <PortableText value={item.skills} />
                 </p>
               </h1>
-              <h2>
-                Educación
-                <p className="about-article-p">
-                  <PortableText value={item.education} />
-                </p>
-              </h2>
             </article>
           ))}
         </section>

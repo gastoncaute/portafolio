@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ResumeSection from "./ResumeSection";
 import AboutSection from "./AboutSection";
 import ProjectSection from "./ProjectSection";
-import ContactSecion from "./ContactSecion";
+import SkillsSection from "./SkillsSecion";
 
 export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
   const [visibleComponent, setVisibleComponent] = useState("about");
@@ -16,10 +16,10 @@ export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
         return selectedLanguage === "Spanish" ? "Sobre mí" : "About";
       case "projects":
         return selectedLanguage === "Spanish" ? "Proyectos" : "Projects";
-      case "contact":
-        return selectedLanguage === "Spanish" ? "Contacto" : "Contact";
       case "resume":
         return selectedLanguage === "Spanish" ? "Currículum" : "Resume";
+      case "skills":
+        return selectedLanguage === "Spanish" ? "Habilidades" : "Skills";
       default:
         return "";
     }
@@ -54,10 +54,10 @@ export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
           </li>
           <li>
             <button
-              className={visibleComponent === "contact" ? "active" : ""}
-              onClick={() => setActiveSection("contact")}
+              className={visibleComponent === "skills" ? "active" : ""}
+              onClick={() => setActiveSection("skills")}
             >
-              {getButtonText("contact")}
+              {getButtonText("skills")}
             </button>
           </li>
         </ul>
@@ -71,8 +71,8 @@ export default function Tabs({ selectedLanguage }: { selectedLanguage: any }) {
       {visibleComponent === "projects" && (
         <ProjectSection selectedLanguage={selectedLanguage} />
       )}
-      {visibleComponent === "contact" && (
-        <ContactSecion selectedLanguage={selectedLanguage} />
+      {visibleComponent === "skills" && (
+        <SkillsSection selectedLanguage={selectedLanguage} />
       )}
     </>
   );
