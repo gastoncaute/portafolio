@@ -27,5 +27,11 @@ export interface About {
   description: any;
   skills: any;
   education: any;
-  resume: any;
+  resume: {
+    resume_image: {
+      _type: string;
+      asset: { _ref: string; _type: string };
+    };
+    resume_link: any;
+  };
 }
