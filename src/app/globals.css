@@ -165,6 +165,8 @@ header nav ul li {
 /* ---------------------------------------------------------------------------------------------TABS SECTIONS---------------------------------------------------------------------------------------- */
 
 .tabs-sections {
+  margin-top: 2rem;
+
   height: 100%;
   display: flex;
   align-items: center;
@@ -182,6 +184,17 @@ header nav ul li {
 .about-article h1 {
   font-size: 28px;
   font: bold;
+}
+
+.about-article h2 {
+  font-size: 28px;
+  font: bold;
+  margin-top: 1rem;
+}
+
+.about-article h3 {
+  font-size: 28px;
+  font: bold;
   margin-top: 1rem;
 }
 
@@ -192,10 +205,4 @@ header nav ul li {
   border-image-slice: 1;
   border-width: 0 0 0 0.2rem;
   font-size: 16px;
-}
-
-/* ---------------------------------------------------------------------------------------------TABS RESUME---------------------------------------------------------------------------------------- */
-
-.resume-article {
-  margin-top: 3rem;
 }

@@ -42,18 +42,18 @@ export default function AboutSection({
                   <PortableText value={item.description} />
                 </p>
               </h1>
-              <h1>
+              <h2>
                 Educación
                 <p className="about-article-p">
                   <PortableText value={item.education} />
                 </p>
-              </h1>
-              <h1>
+              </h2>
+              <h3>
                 Habilidades
                 <p className="about-article-p">
                   <PortableText value={item.skills} />
                 </p>
-              </h1>
+              </h3>
             </article>
           ))}
         </section>
