@@ -124,12 +124,8 @@ header nav ul li {
 
 .tab-nav {
   margin-top: 3.4rem;
-  margin-left: 0.5rem;
-  display: grid;
-  grid-template-rows: min-content;
   align-items: center;
-  height: 75%;
-  justify-content: space-between;
+  width: 100%;
 }
 
 .tab-nav ul {
