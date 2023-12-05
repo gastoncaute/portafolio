@@ -29,6 +29,8 @@ export default function SkillsSection({
   const filteredAboutData = aboutData?.filter(
     (item: About) => item.language === selectedLanguage
   );
+  const getTitlesText =
+    selectedLanguage === "Spanish" ? "Habilidades" : "Skills";
 
   return (
     <>
@@ -36,12 +38,12 @@ export default function SkillsSection({
         <section className="tabs-sections">
           {filteredAboutData.map((item: About) => (
             <article key={item._id} className="about-article">
-              <h1>
-                Habilidades
+              <h2>
+                {getTitlesText}
                 <p className="about-article-p">
                   <PortableText value={item.skills} />
                 </p>
-              </h1>
+              </h2>
             </article>
           ))}
         </section>
