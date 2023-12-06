@@ -312,10 +312,6 @@ header nav ul li {
   }
 
   .about-article h2 {
-    border-width: 0.2rem 0 0 0.2rem;
-    border-style: solid;
-    border-image: linear-gradient(to bottom right, #ba4c0b, #4b4b4b);
-    border-image-slice: 1;
     position: relative;
     top: 5rem;
     margin: auto;
@@ -348,4 +344,33 @@ header nav ul li {
   }
 
   /* ---------------------------------------------------------------------------------------------TAB PROJECTS---------------------------------------------------------------------------------------- */
+}
+
+@media (min-width: 1800px) {
+  .about-article h1 {
+    max-width: 800px;
+    position: relative;
+    grid-column: 1 / 2;
+    font-size: 60px;
+    font: bold;
+    margin: auto;
+  }
+
+  .about-article h1 p {
+    font-size: 26px;
+  }
+
+  .about-article h2 {
+    position: relative;
+    top: 10rem;
+    margin: auto;
+    padding: 0.5rem;
+    grid-column: 2 / 3;
+    font-size: 40px;
+    font: bold;
+  }
+
+  .about-article h2 p {
+    font-size: 18px;
+  }
 }
