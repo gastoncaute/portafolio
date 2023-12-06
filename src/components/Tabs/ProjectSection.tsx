@@ -37,24 +37,26 @@ export default function AboutSection({
     <>
       {projectData && (
         <section className="tabs-sections">
-          {filteredProjectData.map((item: Project) => (
-            <article key={item._id} className="projects-article">
-              <h1>
-                <PortableText value={item.title} />
-              </h1>
-              <Link href={item.page_link} target="#">
-                <Image
-                  src={modifyImageUrl(item.main_image.image.asset._ref)}
-                  alt={item.main_image.epigraph}
-                  height={1000}
-                  width={500}
-                />
-              </Link>
-              <h2>
-                <PortableText value={item.description} />
-              </h2>
-            </article>
-          ))}
+          <section className="project-section">
+            {filteredProjectData.map((item: Project) => (
+              <article key={item._id} className="projects-article">
+                <h1>
+                  <PortableText value={item.title} />
+                </h1>
+                <Link href={item.page_link} target="#">
+                  <Image
+                    src={modifyImageUrl(item.main_image.image.asset._ref)}
+                    alt={item.main_image.epigraph}
+                    height={1000}
+                    width={500}
+                  />
+                </Link>
+                <h2>
+                  <PortableText value={item.description} />
+                </h2>
+              </article>
+            ))}
+          </section>
         </section>
       )}
     </>
