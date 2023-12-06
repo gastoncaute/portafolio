@@ -37,13 +37,13 @@ export default function SkillsSection({
       {aboutData && (
         <section className="tabs-sections">
           {filteredAboutData.map((item: About) => (
-            <article key={item._id} className="about-article">
-              <h2>
+            <article key={item._id} className="skills-article">
+              <h1>
                 {getTitlesText}
-                <p className="about-article-p">
+                <p className="skills-article-p">
                   <PortableText value={item.skills} />
                 </p>
-              </h2>
+              </h1>
             </article>
           ))}
         </section>

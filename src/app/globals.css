@@ -228,6 +228,40 @@ header nav ul li {
   font-size: 16px;
 }
 
+.skills-article h1 {
+  font-size: 28px;
+  font: bold;
+  margin-top: 2rem;
+}
+
+.skills-article h1 .skills-article-p ul {
+  width: min-content;
+  background: linear-gradient(to bottom, #ba4c0b, #9e5429);
+  padding: 0.1rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+}
+
+.skills-article h1 .skills-article-p ul li {
+  width: max-content;
+  margin: auto;
+}
+
+.skills-article h1 .skills-article-p p {
+  margin-left: 0.5rem;
+}
+
+.skills-article-p {
+  padding-left: 0.5rem;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, #ba4c0b, #4b4b4b);
+  border-image-slice: 1;
+  border-width: 0 0 0 0.2rem;
+  font-size: 16px;
+}
+
 /* ---------------------------------------------------------------------------------------------TAB ABOUT---------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------TAB PROJECTS---------------------------------------------------------------------------------------- */
 
