@@ -62,8 +62,7 @@ export default {
         {
           name: 'resume_link',
           title: 'Resume Link',
-          type: 'array',
-          of: [{type: 'block'}],
+          type: 'string',
           validation: (Rule: any) => Rule.required().error('The "Resume Link" is required'),
         },
       ],
